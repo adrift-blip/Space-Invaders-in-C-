@@ -4,20 +4,17 @@ project(PF_Final_Project)
 set(CMAKE_CXX_STANDARD 20)
 find_package(raylib CONFIG REQUIRED)
 
-add_executable(PF_Final_Project main.cpp
-        Spaceship.cpp
-        Spaceship.h
-        Obstacles.cpp
-        Obstacles.h
-        Bullets.cpp
-        Bullets.h
-        Aliens.cpp
-        Aliens.h
-        Boss.cpp
-        Boss.h
-        GameData.cpp
-        GameData.h
-        GameUtilities.cpp
-        GameUtilities.h
+add_executable(PF_Sample_Implement  "Source Code/main.cpp"
+        "Source Code/Spaceship.cpp"
+        "Source Code/Obstacles.cpp"
+        "Source Code/Bullets.cpp"
+        "Source Code/Aliens.cpp"
+        "Source Code/Boss.cpp"
+        "Source Code/GameData.cpp"
+        "Source Code/GameUtilities.cpp"
 )
-target_link_libraries(PF_Final_Project PRIVATE raylib)
+target_link_libraries(PF_Sample_Implement PRIVATE raylib)
+# Copying assets so the game can load them
+file(COPY "Font" DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY "Graphics" DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY "Music" DESTINATION ${CMAKE_BINARY_DIR})
