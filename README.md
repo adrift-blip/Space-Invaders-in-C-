@@ -13,7 +13,8 @@ Unlike the original game, enemies are not randomly generated. Instead, alien shi
 
 The game includes:
 - Player movement  
-- Alien movement  
+- Alien movement
+- A mystery ship which gives the player an extra life
 - Firing mechanics (player and enemy)  
 - Collision detection  
 - Scoring  
@@ -34,7 +35,10 @@ Core graphics library responsible for:
 - Rendering shapes, sprites, and text  
 - Keyboard and input handling  
 - Collision detection  
-- Maintaining the game loop  
+- Maintaining the game loop
+  
+### 3. Other Libraries
+Some other libraries used are cstdlib and time.h for the rand function and to set its seed
 
 ---
 
@@ -60,17 +64,25 @@ https://github.com/educ8s/CPP-Space-Invaders-Game-with-raylib/tree/main/Graphics
 Only the **graphics** folder is used; **no code** has been taken from the repository.  
 This can be verified easily because the referenced project uses **object-oriented programming**, whereas this project is built entirely using fundamental programming concepts.
 
----
-
 ### II. Special Features
 A unique feature of this project is the **final boss fight**.  
 After the player eliminates all alien ships, a mystery boss enemy appears.  
 Defeating this boss ends the game.  
 This fulfills the “levels” requirement mentioned in the project guidelines.
 
----
 
-### III. Division of Work
+### III. General Gameplay Overview
+- The player begins the game
+- They can choose to pause or return to the main menu
+- A simple 2D array of aliens will move across the screen and shoot
+- The player must avoid the lasers by dodging or hiding behind the obstacles
+- Eliminating the aliens will lead to use gaining points
+- With more pints gained the level will increase, causing the aliens to fire more often and the player to fire less
+- Eventually with all the aliens defeated the boss fight will start
+- The boss also fires lasers but his eliminate an entire row from all the obstacles or take away the player's two lives
+- Eliminate the boss and you win! You can then choose to play again or return to the main menu
+
+### IV. Division of Work
 The game is divided into the following functional components:
 
 - Game Loop  
@@ -90,7 +102,7 @@ FAST School of Computing
 
 ---
 
-##Credits for Other Things
+## Credits for Other Things
 Run Amok by Kevin MacLeod | https://incompetech.com/
 Music promoted by https://www.chosic.com/free-music/all/
 Groovy Vibe by Bransboynd | https://pixabay.com/music/beats-groovy-vibe-427121/
