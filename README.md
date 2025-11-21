@@ -96,7 +96,7 @@ The game is divided into the following functional components:
 ## Team Members
 **Muhammad Hamdan Subzwari — 25L-2018**  
 **Muhammad Ayaan — 25L-2015**  
-**Ahmed Tariq — 25L-2007**  
+**Ahmed Tariq — 25L-2008**  
 BCY-1A  
 FAST School of Computing 
 
