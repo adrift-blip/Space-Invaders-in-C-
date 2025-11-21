@@ -1,0 +1,13 @@
+# CLion specific files
+.idea/
+
+# CMake build directory
+cmake-build-debug/
+cmake-build-release/
+
+# Ignore common build files
+*.exe
+*.obj
+*.o
+# Ignore everything outside the project folder
+../../
