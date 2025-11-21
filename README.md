@@ -87,3 +87,13 @@ The game is divided into the following functional components:
 **Ahmed Tariq — 25L-2007**  
 BCY-1A  
 FAST School of Computing 
+
+---
+
+##Credits for Other Things
+Run Amok by Kevin MacLeod | https://incompetech.com/
+Music promoted by https://www.chosic.com/free-music/all/
+Groovy Vibe by Bransboynd | https://pixabay.com/music/beats-groovy-vibe-427121/
+Creative Commons CC BY 3.0
+https://creativecommons.org/licenses/by/3.0/
+Note: You can use any music, however in order to avoid copyright (stupid I know) I used non-copyrighted music for the upload
