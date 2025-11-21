@@ -64,11 +64,14 @@ int main() {
         RateofAlienFire = DifficultyAlienFire(level);
         RateofPlayerFire = DifficultyPlayerFire(level);
         if (IsKeyPressed(KEY_P)) {
-            if (GameStarted)
+            if (GameStarted && run)
                 paused = true;
         }
         if (IsKeyPressed(KEY_R) && GameStarted) { //Resets the game and returns to the main menu
             GameStarted = false;
+            isLossMusicPlaying = false;
+            isWinMusicPlaying = false;
+            isPauseMusicPlaying = false;
             StopMusicStream(PauseMusic);
             StopMusicStream(BGM);
             StopMusicStream(WinMusic);
