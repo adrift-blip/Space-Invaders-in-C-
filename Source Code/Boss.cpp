@@ -77,13 +77,12 @@ void CheckCollisionForBoss(Boss &boss) { //Checks collisions for the boss with p
                 Rectangle BulletRect = GetBulletRect(Tracker[i]);
                 if (CheckCollisionRecs(BossRect, BulletRect)) {
                     Tracker[i].status = false;
-                    if (boss.Bhealth < 0) {
+                     boss.Bhealth -= 5; //Each damage takes away 5 health from the boss
+                    if (boss.Bhealth <= 0) {
                         boss.status = false;
                         score += 500; //Boss is worth 100 points
                         boss.death = true;
                     }
-                    else
-                        boss.Bhealth -= 5; //Each damage takes away 5 health from the boss
                 }
             }
         }
