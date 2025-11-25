@@ -101,6 +101,7 @@ int main() {
         if (!GameStarted) { //If player is on menu then play menu music
             if (IsKeyPressed(KEY_ENTER)) { //Check if user started game
                 GameStarted = true;
+                run = true;
                 StopMusicStream(MenuMusic); //Change music played
                 PlayMusicStream(BGM);
             }
