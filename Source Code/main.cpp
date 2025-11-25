@@ -9,7 +9,7 @@
 #include "GameUtilities.h"
 using namespace std;
 int main() {
-    int highscore = LoadHighScore(); //Loads the highscore
+     int highscore; //Intializes the highscore
     //Intiialize all variables required
     double LastFireTime = 0, LastAlienFireTime = 0, LastBossFireTime = 0, LastMATime = 0; //Fire rates for each element
     double RateofAlienFire, RateofPlayerFire;
@@ -60,6 +60,7 @@ int main() {
         else if (boss.death) {
             UpdateMusicStream(WinMusic);
         }
+        highscore = LoadHighScore(); //Loads the highscore
         int level = Level(score); //Sets level and difficulty according to current score
         RateofAlienFire = DifficultyAlienFire(level);
         RateofPlayerFire = DifficultyPlayerFire(level);
@@ -195,6 +196,8 @@ int main() {
                 }
             }
         }
+        if (score > highscore) //Checks if new score is current high score
+           SaveHighScore(score);
         EndDrawing();
     }
     //Cleans up everything nice and tidy
@@ -202,7 +205,5 @@ int main() {
     CleanUpUserElements(lifeindicator, player, obstacles, boss);
     CloseAudioDevice();
     CloseWindow();
-    if (score > highscore) //Checks if new score is current high score
-        SaveHighScore(score);
     return 0; //IDK kinda just there
 }
