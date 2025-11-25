@@ -15,7 +15,7 @@ int main() {
     double RateofAlienFire, RateofPlayerFire;
     //Bool variables for defining state of a game
     bool run = true, GameStarted = false, MysteryAlienCheck = true, paused = false;
-    char scoreString[4]; //String for storing score
+    char scoreString[4], bosshealthstr[4]; //String for storing score
     int windowheight = 850, windowwidth = 800;
     InitWindow(windowwidth, windowheight, "PF-Final-Projects"); //Create a window for the game
     InitAudioDevice(); //Creates an Audio device to play music
@@ -126,6 +126,10 @@ int main() {
                     boss.status = true;
                 DrawBoss(boss);
                 if (run) { //If game si running then the boss fires
+                    //Displays boss's health
+                    DrawTextEx(GameFont, "BOSS HEALTH:", {293, 15}, 34, 2, yellow);
+                    InttoStringWithZeroes(boss.Bhealth, bosshealthstr);
+                    DrawTextEx(GameFont, bosshealthstr, {374, 40}, 34, 2, yellow);
                     if (rand() % 10 == 0) { //Out of the 60 frames per second boss fires at a random frame every 30 seconds
                         if (GetTime()-LastBossFireTime > 0.75) { //Prevents spamming of bullets by the boss
                             BossFire(boss);
